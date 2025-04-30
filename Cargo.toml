@@ -1,0 +1,15 @@
+[package]
+name = "factory_simulator"
+version = "0.1.0"
+edition = "2024"
+license = "GPL-3.0-or-later"
+license-file = "LICENSE"
+description = "A simulator for factories and their performance."
+repository = "https://github.com/G0rocks/factory_simulator"
+categories = ["simulation", "science"]
+keywords = ["engineering", "factory", "manufacturing", "simulation"]
+readme = "README.md"
+
+
+
+[dependencies]
