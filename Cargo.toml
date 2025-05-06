@@ -13,3 +13,4 @@ readme = "README.md"
 
 
 [dependencies]
+geo = "0.30.0"
