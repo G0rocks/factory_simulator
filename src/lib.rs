@@ -3,8 +3,8 @@
 /// Date: 2025-04-30
 
 // Import crates
-use geo::Point; // For representing geographical points
-use std::{array, collections::HashMap}; // For representing a HashMap
+// use geo::Point; // For representing geographical points
+use std::{collections::HashMap}; // For representing a HashMap
 
 
 // Structs
@@ -12,7 +12,7 @@ use std::{array, collections::HashMap}; // For representing a HashMap
 
 /// Struct representing a product
 /// Products are what the factory produces, they need a recipe with ingredients which is what the factory needs to make the product
-/// ### Warning
+/// ### Warninggeo::Point::new(longitude, latitude)
 /// The recipe is a Hashmap with the ingredients as keys and their amounts as values but no units so you must make sure that your units are correct.
 /// This means that if you want to make a product that is 1kg of bread, then your hashmap might be {"flour": 0.5, "water": 0.3, "yeast": 0.2} but you have to know that the 1 bread is 1 kg of bread, not 1 loaf of bread and you need to know the units of your ingredients.
 #[derive(Debug)]
@@ -66,17 +66,18 @@ impl Factory {
     }
 
     /// Evaluates the supply chain for a given product
-    pub fn evaluate_supply_chain(&self, product: Product, deliveries: Vec<Delivery>) -> Vec<f64> {
-        todo!("Implement supply chain evaluation for ingredient: {}", product.name);
+    pub fn evaluate_supply_chain(&self, product: Product, _deliveries: Vec<Delivery>) -> Vec<f64> {
         // Init empty ingredient storage status vector
-        let mut ingredient_storage_status: Vec<f64> = vec![];
+        let mut _ingredient_storage_status: Vec<f64> = vec![];
 
         // Loop through each delivery, log the storage status at the time of delivery
+        // for delivery in deliveries.iter() {
             // Check if the ingredient is in the recipe for the product
-
+        // }
 
         // Return the ingredient storage status vector
-        return ingredient_storage_status;
+        todo!("Implement supply chain evaluation for ingredient: {}", product.name);
+        // return ingredient_storage_status;
     }
 
 }
